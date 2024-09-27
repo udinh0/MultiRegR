@@ -18,10 +18,10 @@ diretamente do GitHub usando o pacote `devtools`:
 
 ``` r
 # Instale o pacote devtools, se ainda não o tiver
-# install.packages("devtools")
+install.packages("devtools")
 
 # Instale o MultiRegR a partir do GitHub
-# devtools::install_github("link_github")
+devtools::install_github("https://github.com/udinh0/MultiRegR")
 ```
 
 ## Exemplo de Uso
@@ -41,7 +41,7 @@ library(MultiRegR)
 modelo = RegLin(y ~ x1 + x2, data = exampleData)
 
 # Ver os coeficientes estimados
-modelo$beta_hat
+modelo$coefficients
 ```
 
     ##            [,1]
@@ -57,7 +57,7 @@ ajustados vs. observados, um QQPlot dos resíduos, um histograma dos
 resíduos e a ACF dos resíduos.
 
 ``` r
-plot_reglin(modelo)
+plot(modelo)
 ```
 
 ![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->![](README_files/figure-gfm/unnamed-chunk-3-2.png)<!-- -->![](README_files/figure-gfm/unnamed-chunk-3-3.png)<!-- -->![](README_files/figure-gfm/unnamed-chunk-3-4.png)<!-- -->
@@ -70,8 +70,8 @@ dados com a função predict_reglin():
 ``` r
 # Gerar novos dados para predição
 novos_dados = data.frame(
-  x1 = runif(5, 0, 1),
-  x2 = runif(5, 10, 20)
+  x1 = rnorm(5, 0, 1),
+  x2 = rnorm(5, 10, 2)
 )
 
 # Fazer a predição dos novos valores
@@ -80,11 +80,11 @@ print(predicoes)
 ```
 
     ##            [,1]
-    ## [1,] 0.04414973
-    ## [2,] 0.05829769
-    ## [3,] 0.04341499
-    ## [4,] 0.04768808
-    ## [5,] 0.02940960
+    ## [1,] 0.05491180
+    ## [2,] 0.01532061
+    ## [3,] 0.05120813
+    ## [4,] 0.03949992
+    ## [5,] 0.05559175
 
 ## Problemas ou melhorias
 

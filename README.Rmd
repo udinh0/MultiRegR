@@ -10,12 +10,12 @@ O objetivo do pacote **MultiRegR** é fornecer uma interface amigável para ajus
 
 Você pode instalar a versão de desenvolvimento do **MultiRegR** diretamente do GitHub usando o pacote `devtools`:
 
-```{r}
+```{r, eval = FALSE}
 # Instale o pacote devtools, se ainda não o tiver
-# install.packages("devtools")
+install.packages("devtools")
 
 # Instale o MultiRegR a partir do GitHub
-# devtools::install_github("link_github")
+devtools::install_github("https://github.com/udinh0/MultiRegR")
 ```
 
 ## Exemplo de Uso
@@ -32,14 +32,14 @@ library(MultiRegR)
 modelo = RegLin(y ~ x1 + x2, data = exampleData)
 
 # Ver os coeficientes estimados
-modelo$beta_hat
+modelo$coefficients
 ```
 
 ### Geração de Gráficos de Diagnóstico
 Uma vez ajustado o modelo, você pode visualizar diversos gráficos de diagnóstico para avaliar o ajuste do modelo, incluindo os valores ajustados vs. observados, um QQPlot dos resíduos, um histograma dos resíduos e a ACF dos resíduos.
 
 ```{r}
-plot_reglin(modelo)
+plot(modelo)
 ```
 
 ### Fazer Predições em Novos Dados
@@ -48,8 +48,8 @@ Você também pode usar o modelo ajustado para predizer valores de novos dados c
 ```{r}
 # Gerar novos dados para predição
 novos_dados = data.frame(
-  x1 = runif(5, 0, 1),
-  x2 = runif(5, 10, 20)
+  x1 = rnorm(5, 0, 1),
+  x2 = rnorm(5, 10, 2)
 )
 
 # Fazer a predição dos novos valores
