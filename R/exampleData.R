@@ -1,0 +1,14 @@
+#' @title Dados para exemplo das funções.
+#'
+#' @format Objeto \code{data.frame} com 5 colunas:
+#'
+#' \describe{
+#' \item{y}{1000 Valores gerados de uma normal(0, 1)}
+#' \item{x1}{1000 Valores gerados de uma normal(3, 2)}
+#' \item{x2}{1000 Valores gerados de uma normal(5, 2)}
+#' \item{const}{Valor constante para os testes.}
+#' \item{char}{Valor do tipo 'character' para os testes.}
+#' }
+#'
+#' @source Arquivo gerado aleatóriamente durante a documentação.
+"exampleData"

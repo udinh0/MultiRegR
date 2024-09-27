@@ -1,0 +1,16 @@
+Package: MultiRegR
+Title: Modelos de Regressão e Diagnósticos para Regressão Linear Múltipla.
+Version: 0.0.0.9000
+Authors@R: 
+    person("João Vitor", "Nunes da Silva", ,"j175072@dac.unicamp.br", role = c("aut", "cre"))
+Description: O MultiRegR foi projetado para fornecer uma interface intuitiva para ajustar modelos de regressão linear múltipla e gerar gráficos diagnósticos.
+License: GPL (>= 3)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+Depends: 
+    R (>= 2.10)
+LazyData: true
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
