@@ -52,9 +52,10 @@ RegLin = function(formula, data) {
     X = X,
     Y = Y
   )
+
   class(resultado) = "RegLin"
   return(resultado)
-
 }
+
 
 
