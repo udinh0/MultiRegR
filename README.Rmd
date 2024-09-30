@@ -32,7 +32,7 @@ library(MultiRegR)
 modelo = RegLin(y ~ x1 + x2, data = exampleData)
 
 # Ver os coeficientes estimados
-modelo$coefficients
+modelo
 ```
 
 ### Geração de Gráficos de Diagnóstico

@@ -41,13 +41,20 @@ library(MultiRegR)
 modelo = RegLin(y ~ x1 + x2, data = exampleData)
 
 # Ver os coeficientes estimados
-modelo$coefficients
+modelo
 ```
 
-    ##            [,1]
-    ## 1   0.010398273
-    ## x1 -0.018020518
-    ## x2  0.002887958
+    ## Call:
+    ## RegLin(formula = y ~ x1 + x2, data = exampleData)
+    ## 
+    ## Coeficientes:
+    ##                Estimate Std. Error    t-value   p-value
+    ## Intercepto  0.010398273 0.10173402  0.1022104 0.9186102
+    ## x1         -0.018020518 0.01636494 -1.1011661 0.2710902
+    ## x2          0.002887958 0.01626230  0.1775861 0.8590841
+    ## 
+    ## R2: 0.001247 
+    ## R2 Ajustado: -0.0007566
 
 ### Geração de Gráficos de Diagnóstico
 
@@ -80,11 +87,11 @@ print(predicoes)
 ```
 
     ##            [,1]
-    ## [1,] 0.05491180
-    ## [2,] 0.01532061
-    ## [3,] 0.05120813
-    ## [4,] 0.03949992
-    ## [5,] 0.05559175
+    ## [1,] 0.05844496
+    ## [2,] 0.03912540
+    ## [3,] 0.02437675
+    ## [4,] 0.01563628
+    ## [5,] 0.01814152
 
 ## Problemas ou melhorias
 
