@@ -43,9 +43,10 @@ plot(modelo)
 ```
 
 ### Fazer Predições em Novos Dados
-Você também pode usar o modelo ajustado para predizer valores de novos dados com a função predict_reglin():
+Você também pode usar o modelo ajustado para predizer valores de novos dados com a função predict():
 
 ```{r}
+set.seed(1)
 # Gerar novos dados para predição
 novos_dados = data.frame(
   x1 = rnorm(5, 0, 1),
@@ -53,10 +54,9 @@ novos_dados = data.frame(
 )
 
 # Fazer a predição dos novos valores
-predicoes = predict_reglin(modelo, novos_dados)
-print(predicoes)
+predicoes = predict(modelo, novos_dados)
+predicoes
 ```
-
 
 ## Problemas ou melhorias
 Se você encontrar algum problema ou tiver sugestões de melhorias, sinta-se à vontade para abrir uma issue no repositório do GitHub.
